@@ -1,0 +1,29 @@
+#!/usr/local/bin/ruby
+require 'benchmark'
+require 'pry'
+require_relative '../binary_translator'
+
+puts "THIS IS NOT AN INTERACTIVE EXPERIENCE."
+sleep(1)
+puts "THIS IS A PASSIVE EXPERIENCE."
+sleep(1)
+puts "HI BEE! Do you want to do MATH?!?!"
+sleep(2)
+puts "silly question. of course you do."
+sleep(3)
+puts "100100101100 in Binary is #{binary_translator(100100101100)} in Base-10"
+sleep(3)
+puts "11000000111001 in Binary is #{binary_translator(11000000111001)} in Base-10"
+sleep(3)
+puts "1000000000 in Binary is #{binary_translator(1000000000)} in Base-10"
+sleep(3)
+puts "P.S. I like singing songs with you"
+sleep(2)
+seconds = Benchmark.measure do 
+  binary_translator(100100101100)
+  binary_translator(11000000111001)
+  binary_translator(1000000000)
+end
+puts "did you think i made those conversions kind of slowly?"
+sleep(2)
+puts "Just Kidding. I can perform those calculations in #{seconds}"
